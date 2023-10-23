@@ -3,8 +3,8 @@
     <variables>
         <color-preset>frozen</color-preset>
         <showDownloadButton>true</showDownloadButton>
-        <download-page>https://www.becker-software.de/whmcs-module/lexoffice/</download-page>
-        <download-title>Buy Module</download-title>
+        <download-page>https://www.becker-software.de/</download-page>
+        <download-title>Visit Website</download-title>
     </variables>
     <build-profile instance="hi"/>
     <footer>
