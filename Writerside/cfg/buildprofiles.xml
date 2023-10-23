@@ -9,5 +9,8 @@
     <build-profile instance="hi"/>
     <footer>
         <copyright>Martin Becker Software</copyright>
+        <link href="https://www.becker-software.de">Website</link>
+        <link href="https://www.becker-software.de/blog/">Blog</link>
+        <link href="https://portal.becker-software.de">Portal</link>
     </footer>
 </buildprofiles>
