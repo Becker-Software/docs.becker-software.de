@@ -1,4 +1,5 @@
 # Installation
+
 In diesem Artikel erfahren Sie, wie Sie das Modul in WHMCS installieren und konfigurieren.
 
 ## Herunterladen
@@ -43,7 +44,7 @@ WHMCS noch ausliefern.
 ### 2. Installation der neuen invoicepdf.tpl
 
 Das Modul enthält im Ordner `uploads/templates/yourTheme/invoicepdf.tpl` die erforderliche Datei. Bitte ziehen Sie diese
-Datei in den Ordner Ihres aktiven Themes. 
+Datei in den Ordner Ihres aktiven Themes.
 
 ## Custom Fields
 
@@ -54,12 +55,11 @@ Bitte erstellen Sie unter Settings -> Custom Fields, ein Kundenfeld mit folgende
 
 Dieses Custom Field muss nun in den Moduleinstellungen angewählt werden. Die Änderung, dann mit Speichern bestätigen.
 
-
 ## Aktivieren der lexoffice API
 
 <tabs>
     <tab title="Authorization Key">
-        <img src="apikey.png">
+        <img src="apikey.png"/>
         <p>Gehen Sie auf den Link "Schlüssel Abrufen" in den Moduleinstellungen, anschließend müssen Sie sich anmelden.</p>
         <p> Danach erhalten Sie einen <code>Autorisierungsschlüssel</code> welchen Sie kopieren und in das gleichnamige Feld in den Moduleinstellungen eintragen müssen.</p>
     </tab>
@@ -81,7 +81,7 @@ Dieses Custom Field muss nun in den Moduleinstellungen angewählt werden. Die Ä
 Damit Sie auf den administrativen Bereich des Moduls zugreifen können, müssen Sie in den WHMCS Moduleinstellungen die
 Zugriffsrollen festlegen. Diese Einstellung finden Sie am Ende der Moduleinstellungen für das lexoffice Modul.
 
-##  Webhooks
+## Webhooks
 
 Webhooks erlauben die direkte Kommunikation von lexoffice mit WHMCS. Das bedeutet, dass das
 Modul auf bestimmte Ereignisse in lexoffice reagieren kann, wie zum Beispiel das Erstellen einer neuen Rechnung. Sobald

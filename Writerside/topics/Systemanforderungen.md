@@ -21,4 +21,4 @@ kontaktieren.
 | VAT ID Verifikation                   | Deaktiviert                                |
 | WHMCS Rechnungsnummern (EU VAT Addon) | Deaktiviert                                |
 | Währungen                             | Ausschließlich € / EUR                     |
-| Steuern | Keine oder alle Steuern auf Steuer Level 1 |
+| Steuern                               | Keine oder alle Steuern auf Steuer Level 1 |
