@@ -4,9 +4,9 @@
 
 <instance-profile id="hi"
                   name="Becker-Software Documentation"
-                  start-page="Index.topic">
+                  start-page="start.topic">
 
-    <toc-element topic="Index.topic" toc-title="Documentation"/>
+    <toc-element topic="start.topic" toc-title="Documentation"/>
     <toc-element topic="whmcs-lexoffice-modul.md">
         <toc-element topic="lexoffice-requirements.md"/>
         <toc-element topic="lexoffice-install.topic"/>
