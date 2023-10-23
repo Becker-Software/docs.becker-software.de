@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
 <rules>
+    <rule id="71167c19">
+        <description>Created after removal of "Index" from Becker-Software Documentation</description>
+        <accepts>index_md.html</accepts>
+    </rule>
+    <rule id="1d19b5d5">
+        <description>Created after removal of "WHMCS Credit Expiry" from Becker-Software Documentation</description>
+        <accepts>WHMCS-Credit-Expiry.html</accepts>
+    </rule>
 </rules>
