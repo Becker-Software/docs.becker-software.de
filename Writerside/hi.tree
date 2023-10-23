@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="Becker-Software Documentation"
+                 start-page="WHMCS-lexoffice-Modul.md">
+
+    <toc-element topic="WHMCS-lexoffice-Modul.md">
+        <toc-element topic="Systemanforderungen.md"/>
+        <toc-element topic="Installationsaneitung.md"/>
+        <toc-element topic="Konfiguration.md"/>
+        <toc-element topic="Features.md"/>
+    </toc-element>
+</instance-profile>
