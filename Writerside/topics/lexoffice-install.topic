@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
-<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       id="lexoffice-install" title="Installation">
+<topic id="lexoffice-install"
+       title="Installation"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
     <title>
         Installation
@@ -10,7 +11,7 @@
     <var name="module" value="lexoffice"/>
     <snippet id="install_whmcs_module">
         <p>In diesem Artikel erfahren Sie, wie Sie das Modul in WHMCS installieren und konfigurieren.</p>
-        <chapter title="Herunterladen" id="herunterladen">
+        <chapter id="herunterladen" title="Herunterladen">
             <p>Sie können die neuste Modulversion im Kundencenter unter
                 (https://portal.becker-software.de)[portal.becker-software.de]
                 abrufen.
@@ -18,110 +19,130 @@
                 Ihrem
                 Computer.</p>
         </chapter>
-        <chapter title="Hochladen" id="hochladen">
+        <chapter id="hochladen" title="Hochladen">
             <p>Im entpackten Order finden Sie einen uploads Ordner, bitte laden Sie den Inhalt dies Ordners in Ihr WHMCS
                 Root
                 Verzeichnis hoch.</p>
         </chapter>
-        <chapter title="Modulaktivierung" id="modulaktivierung">
-            <procedure type="steps" id="install-module">
+        <chapter id="modulaktivierung" title="Modulaktivierung">
+            <procedure id="install-module" type="steps">
                 <step>Melden Sie sich in Ihrem WHMCS-Adminbereich an.</step>
                 <step>Navigieren Sie zu "Setup" → "Addon Modules".</step>
                 <step>Suchen Sie nach dem Modul und klicken Sie auf "Activate".</step>
-                <p>Es dauert einen kleinen Moment, bis die Installation des Moduls abgeschlossen ist. Fahren Sie mit der "Konfiguration" fort.</p>
+                <p>Es dauert einen kleinen Moment, bis die Installation des Moduls abgeschlossen ist. Fahren Sie mit der
+                    "Konfiguration" fort.</p>
             </procedure>
         </chapter>
     </snippet>
-</chapter>
-<chapter title="Rechnungsüberschreibung" id="rechnungs-berschreibung">
-<p>Das Modul überschreibt die Erstellung von PDF Rechnungen in WHMCS und stattdessen liefert diese direkt von lexoffice
-    aus.</p>
-<p>Dies gilt nur für Rechnungen, die ab dem angegebenen &quot;Rechnungsyncronisation ab&quot; Datum erstellt wurden.
-    Kunden, die
-    Rechnungen nach diesem Datum erhalten, werden die PDF Rechnungen direkt von lexoffice in WHMCS angezeigt bekommen.
-    Alle
-    Rechnungen, die vor dem angegebenen Datum erstellt wurden, werden von lexoffice gerendert und angezeigt.</p>
-<p>Damit Rechnungen die vor dem &quot;Rechnungsyncronisation ab&quot; Datum noch angezeigt werden können, ist es
-    erforderlich das Sie
-    ein paar Veränderungen in Ihrem Theme durchführen.</p>
-<p>Begeben Sie sich bitte den Ordner, indem sich das aktive Theme Ihrer WHMCS Installation befindet. Beispielsweise
-    <code>/templates/six</code>.</p>
-<chapter title="1. Backup Ihrer invoicepdf.tpl" id="1-backup-ihrer-invoicepdf-tpl">
-    <p>Das Modul überschreibt die invoicepdf.tpl damit Rechnungen direkt zum Kunden von lexoffice ausgeliefert werden
-        können.
-        Ihre alten Kunden sehen dann den inhalt der invoicepdf-fallback.tpl, so können Sie Ihre alten Rechnungen direkt
-        aus
-        WHMCS noch ausliefern.</p>
-</chapter>
-<chapter title="2. Installation der neuen invoicepdf.tpl" id="2-installation-der-neuen-invoicepdf-tpl">
-    <p>Das Modul enthält im Ordner <code>uploads/templates/yourTheme/invoicepdf.tpl</code> die erforderliche Datei.
-        Bitte ziehen Sie diese
-        Datei in den Ordner Ihres aktiven Themes.</p>
-</chapter>
-</chapter>
-<chapter title="Custom Fields" id="custom-fields">
-<tip style:="" info="">
-    <p style:="" info="">Hinweis: Ab Version 2.3.0 wird dieser Schritt automatisch mit Modulaktivierung erledigt.</p>
-</tip>
-<p>Bitte erstellen Sie unter Settings -&gt; Custom Fields, ein Kundenfeld mit folgenden Eigenschaften.</p>
-<p>Dieses Custom Field muss nun in den Moduleinstellungen angewählt werden. Die Änderung, dann mit Speichern
-    bestätigen.</p>
-</chapter>
-<chapter title="Aktivieren der lexoffice API" id="aktivieren-der-lexoffice-api">
-<tabs>
-    <tab title="Authorization Key">
-        <img src="apikey.png"/>
-        <p>Gehen Sie auf den Link "Schlüssel Abrufen" in den Moduleinstellungen, anschließend müssen Sie sich
-            anmelden.</p>
-        <p> Danach erhalten Sie einen <code>Autorisierungsschlüssel</code> welchen Sie kopieren und in das gleichnamige
-            Feld in den Moduleinstellungen eintragen müssen.</p>
-    </tab>
-    <tab title="Public API">
-        <warning>
-            <p>
-                Die benutzung der Public API ist veraltet und wird in einer zukünftigen Version nicht mehr unterstützt.
-            </p>
-        </warning>
-        <p>Bitte tragen Sie in die Moduleinstellungen Ihren lexoffice API Key ein. Diesen können Sie abrufen unter <a
-                href="https://app.lexoffice.de/addons/public-api">API Key anfragen</a>.</p>
-    </tab>
-</tabs>
-</chapter>
-<chapter title="Modulzugriff" id="modulzugriff">
-<img src="../images/Bild3.png" alt="Bild3.png"/>
-<p>Damit Sie auf den administrativen Bereich des Moduls zugreifen können, müssen Sie in den WHMCS Moduleinstellungen die
-    Zugriffsrollen festlegen. Diese Einstellung finden Sie am Ende der Moduleinstellungen für das lexoffice Modul.</p>
-</chapter>
-<chapter title="Webhooks" id="webhooks">
-<p>Webhooks erlauben die direkte Kommunikation von lexoffice mit WHMCS. Das bedeutet, dass das
-    Modul auf bestimmte Ereignisse in lexoffice reagieren kann, wie zum Beispiel das Erstellen einer neuen Rechnung.
-    Sobald
-    dieses Ereignis auftritt, sendet lexoffice eine Nachricht, einen sogenannten Webhook, an das Modul, um es darüber zu
-    informieren. Das Modul kann dann entsprechend reagieren, indem es beispielsweise die Rechnung in WHMCS importiert
-    oder
-    aktualisiert.</p>
-<p>Bitte öffnen Sie in Ihren WHMCS Admin oben den Reiter <code>Addons -&gt; lexoffice Modul -&gt; Webhooks</code>. Dort
-    aktivieren Sie die
-    Webhooks.</p>
-<img src="../images/Bild2.png" alt="Bild4.png"/>
-<p>Soll Zustand:</p>
-<img src="../images/Bild1.png" alt="Bild5.png"/>
-</chapter>
-<chapter title="Testen" id="testen">
-<p>Sobald Sie die Einrichtung abgeschlossen haben, sollten Sie das Modul testen, um sicherzustellen, dass es wie
-    erwartet
-    funktioniert. Dazu erstellen Sie einfach eine neue Rechnung für einen Testkunden, der Beleg wird dann automatisch in
-    lexoffice importiert.</p>
-<p>Bitte testen Sie zunächst den Belegimport auf einem Testsystem, auf die korrekte Funktionsweise. Becker Software hat
-    keinen Einblick in Ihre Systeme, Belege und Daten. Bitte überzeugen Sie sich daher selbständig vor in Betriebnahme
-    von
-    der Korrekten funktionsweise.</p>
-</chapter>
-<chapter title="Support" id="support">
-<p>Wenn du Probleme bei der Installation oder Konfiguration des Moduls hast, zögern Sie nicht, den Support zu
-    kontaktieren.
-    Wir
-    stehen gerne zur Verfügung, um Ihnen zu helfen.</p>
-</chapter>
+    <chapter id="rechnungs-berschreibung" title="Rechnungsüberschreibung">
+        <p>Das Modul überschreibt die Erstellung von PDF Rechnungen in WHMCS und stattdessen liefert diese direkt von
+            lexoffice
+            aus.</p>
+        <p>Dies gilt nur für Rechnungen, die ab dem angegebenen &quot;Rechnungsyncronisation ab&quot; Datum erstellt
+            wurden.
+            Kunden, die
+            Rechnungen nach diesem Datum erhalten, werden die PDF Rechnungen direkt von lexoffice in WHMCS angezeigt
+            bekommen.
+            Alle
+            Rechnungen, die vor dem angegebenen Datum erstellt wurden, werden von lexoffice gerendert und angezeigt.</p>
+        <p>Damit Rechnungen die vor dem &quot;Rechnungsyncronisation ab&quot; Datum noch angezeigt werden können, ist es
+            erforderlich das Sie
+            ein paar Veränderungen in Ihrem Theme durchführen.</p>
+        <p>Begeben Sie sich bitte den Ordner, indem sich das aktive Theme Ihrer WHMCS Installation befindet.
+            Beispielsweise
+            <code>/templates/six</code>.</p>
+        <chapter id="1-backup-ihrer-invoicepdf-tpl" title="1. Backup Ihrer invoicepdf.tpl">
+            <p>Das Modul überschreibt die invoicepdf.tpl damit Rechnungen direkt zum Kunden von lexoffice ausgeliefert
+                werden
+                können.
+                Ihre alten Kunden sehen dann den inhalt der invoicepdf-fallback.tpl, so können Sie Ihre alten Rechnungen
+                direkt
+                aus
+                WHMCS noch ausliefern.</p>
+        </chapter>
+        <chapter id="2-installation-der-neuen-invoicepdf-tpl" title="2. Installation der neuen invoicepdf.tpl">
+            <p>Das Modul enthält im Ordner <code>uploads/templates/yourTheme/invoicepdf.tpl</code> die erforderliche
+                Datei.
+                Bitte ziehen Sie diese
+                Datei in den Ordner Ihres aktiven Themes.</p>
+        </chapter>
+    </chapter>
+    <chapter id="custom-fields" title="Custom Fields">
+        <tip>
+            <p>Hinweis: Ab Version 2.3.0 wird dieser Schritt automatisch mit Modulaktivierung
+                erledigt.</p>
+        </tip>
+        <p>Bitte erstellen Sie unter Settings -&gt; Custom Fields, ein Kundenfeld mit folgenden Eigenschaften.</p>
+        <p>Dieses Custom Field muss nun in den Moduleinstellungen angewählt werden. Die Änderung, dann mit Speichern
+            bestätigen.</p>
+    </chapter>
+    <chapter id="aktivieren-der-lexoffice-api" title="Aktivieren der lexoffice API">
+        <tabs>
+            <tab title="Authorization Key">
+                <img alt="Apikey" src="apikey.png"/>
+                <p>Gehen Sie auf den Link "Schlüssel Abrufen" in den Moduleinstellungen, anschließend müssen Sie sich
+                    anmelden.</p>
+                <p> Danach erhalten Sie einen <code>Autorisierungsschlüssel</code> welchen Sie kopieren und in das
+                    gleichnamige
+                    Feld in den Moduleinstellungen eintragen müssen.</p>
+            </tab>
+            <tab title="Public API">
+                <warning>
+                    <p>
+                        Die benutzung der Public API ist veraltet und wird in einer zukünftigen Version nicht mehr
+                        unterstützt.
+                    </p>
+                </warning>
+                <p>Bitte tragen Sie in die Moduleinstellungen Ihren lexoffice API Key ein. Diesen können Sie abrufen
+                    unter <a
+                            href="https://app.lexoffice.de/addons/public-api">API Key anfragen</a>.</p>
+            </tab>
+        </tabs>
+    </chapter>
+    <chapter id="modulzugriff" title="Modulzugriff">
+        <img alt="Bild3.png" src="../images/Bild3.png"/>
+        <p>Damit Sie auf den administrativen Bereich des Moduls zugreifen können, müssen Sie in den WHMCS
+            Moduleinstellungen die
+            Zugriffsrollen festlegen. Diese Einstellung finden Sie am Ende der Moduleinstellungen für das lexoffice
+            Modul.</p>
+    </chapter>
+    <chapter id="webhooks" title="Webhooks">
+        <p>Webhooks erlauben die direkte Kommunikation von lexoffice mit WHMCS. Das bedeutet, dass das
+            Modul auf bestimmte Ereignisse in lexoffice reagieren kann, wie zum Beispiel das Erstellen einer neuen
+            Rechnung.
+            Sobald
+            dieses Ereignis auftritt, sendet lexoffice eine Nachricht, einen sogenannten Webhook, an das Modul, um es
+            darüber zu
+            informieren. Das Modul kann dann entsprechend reagieren, indem es beispielsweise die Rechnung in WHMCS
+            importiert
+            oder
+            aktualisiert.</p>
+        <p>Bitte öffnen Sie in Ihren WHMCS Admin oben den Reiter <code>Addons -&gt; lexoffice Modul -&gt;
+            Webhooks</code>. Dort
+            aktivieren Sie die
+            Webhooks.</p>
+        <img alt="Bild4.png" src="../images/Bild2.png"/>
+        <p>Soll Zustand:</p>
+        <img alt="Bild5.png" src="../images/Bild1.png"/>
+    </chapter>
+    <chapter id="testen" title="Testen">
+        <p>Sobald Sie die Einrichtung abgeschlossen haben, sollten Sie das Modul testen, um sicherzustellen, dass es wie
+            erwartet
+            funktioniert. Dazu erstellen Sie einfach eine neue Rechnung für einen Testkunden, der Beleg wird dann
+            automatisch in
+            lexoffice importiert.</p>
+        <p>Bitte testen Sie zunächst den Belegimport auf einem Testsystem, auf die korrekte Funktionsweise. Becker
+            Software hat
+            keinen Einblick in Ihre Systeme, Belege und Daten. Bitte überzeugen Sie sich daher selbständig vor in
+            Betriebnahme
+            von
+            der Korrekten funktionsweise.</p>
+    </chapter>
+    <chapter id="support" title="Support">
+        <p>Wenn du Probleme bei der Installation oder Konfiguration des Moduls hast, zögern Sie nicht, den Support zu
+            kontaktieren.
+            Wir
+            stehen gerne zur Verfügung, um Ihnen zu helfen.</p>
+    </chapter>
 
-        </topic>
+</topic>
