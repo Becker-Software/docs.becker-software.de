@@ -12,7 +12,7 @@ unter "Downloads" abrufen.
 
 ## Version 3.1.7 {collapsible="true"}
 
-- Erkennung von weiteren Sprachpaketen ausser "german", alle Sprachparkete die mit german beginnen werden als deutsch
+- Erkennung von weiteren Sprachpaketen ausser "german", alle Sprachpakete die mit german beginnen werden als deutsch
   erkannt. Beispiel: german-informal
 
 ## Version 3.1.5 {collapsible="true"}
