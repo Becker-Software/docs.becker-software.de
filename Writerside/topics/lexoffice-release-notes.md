@@ -3,6 +3,12 @@
 Die letzte version des lexoffice WHMCS Moduls können Sie in Ihrem [Kundencenter](https://portal.becker-software.de)
 unter "Downloads" abrufen.
 
+## Version 3.1.8 {collapsible="true"}
+
+**Fehlerbehebungen**
+
+- Behebung eines Fehlers welcher dafür gesorgt hat das bei manchen WHMCS Instanzen die lexoffice PDF nicht geladen wird.
+
 ## Version 3.1.7 {collapsible="true"}
 
 - Erkennung von weiteren Sprachpaketen ausser "german", alle Sprachparkete die mit german beginnen werden als deutsch
