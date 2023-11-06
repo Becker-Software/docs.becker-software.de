@@ -13,6 +13,7 @@
         <toc-element topic="lexoffice-config.md"/>
         <toc-element topic="lexoffice-features.md"/>
         <toc-element topic="lexoffice-release-notes.md"/>
+        <toc-element topic="Umstellung-lexoffice-Auth.md" toc-title="Umstellung auf Autorisierungsschlüssel"/>
     </toc-element>
     <toc-element topic="whmcs-sevdesk-modul.md">
         <toc-element topic="sevdesk-requirements.md"/>
