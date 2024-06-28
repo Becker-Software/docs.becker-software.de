@@ -1,12 +1,13 @@
+> Verfügbar ab Version 3.4.0
+{style="warning"}
+
 # Variablen
 
 Das Modul erlaubt die Verwendung von Variablen in den Zahlungstext, Rechnungseinleitung sowie dem Rechnungsschlussatz.
 Die Variablen werden durch den gleichen Parser wie in WHMCS verarbeitet und funktionen aus den WHMCS Modulen können
 ebenfalls verwendet werden.
 
-## Verfügbare Variablen
-
-# Client ($client.x)
+## Client ($client.x)
 
 | Variable                              | Datentyp      | Beispielwert                         | Beschreibung                                                            |
 |---------------------------------------|---------------|--------------------------------------|-------------------------------------------------------------------------|
@@ -87,7 +88,7 @@ ebenfalls verwendet werden.
 | {$client.customfields5}               | String        | 10001                                | Benutzerdefiniertes Feld 5.                                             |
 | {$client.customfields6}               | String        |                                      | Benutzerdefiniertes Feld 6.                                             |
 
-### Invoice ($invoice.X)
+## Invoice ($invoice.X)
 
 | Variable                               | Datentyp                | Beispielwert        | Beschreibung                                                     |
 |----------------------------------------|-------------------------|---------------------|------------------------------------------------------------------|
@@ -116,7 +117,7 @@ ebenfalls verwendet werden.
 | `{$invoice.items[0].item.amount}`      | String                  | 1.00                | Betrag des ersten Rechnungspostens.                              |
 | `{$invoice.items[0].item.taxed}`       | Boolean                 | 1                   | Gibt an, ob der erste Rechnungsposten besteuert wird (1 oder 0). |
 
-### Custom Fields ($customfields.X)
+## Custom Fields ($customfields.X)
 
 Custom Fields werden als Array übergeben, dabei wird der name des Custom Fields als Key verwendet.
 Dem Key werden alle Zeichen bis auf a-z A-Z 0-9 entfernt und in Kleinbuchstaben umgewandelt.
@@ -130,7 +131,7 @@ Beispiel
 | `lexoffice_customer_id`       | `{$customfields.lexoffice_customer_id }` |
 | `Geschlecht (optional)`       | `{$customfields.geschlecht_optional}` |
 
-### Sepa Pre-Notification ($sepa_prenotification_X)
+## Sepa Pre-Notification ($sepa_prenotification_X)
 
 > Um die SEPA Vorabinformation zu verwenden, muss ein Custom Field Field mit dem Namen `SEPA Prenotification Days` oder `sepa_prenotification_days` erstellt werden.
 > Der Inhalt des Custom Fields muss die Anzahl der Tage enthalten.
@@ -147,9 +148,7 @@ Beispiel
 Die Spezielle Variable `{$sepa_prenotification_date}` oder `{$sepa_prenotification_due_date}` wird verwendet um das Datum der SEPA Vorabinformation zu setzen.
 Hierbei handelt es sich um ein Datum, welches in der SEPA Vorabinformation als Datum des Einzugs angegeben wird.
 
-## Beispiele
-
-### IF-Abfrage_
+## IF-Abfrage_
 
 ```smarty
 {if $invoice.tax > 0}
@@ -164,8 +163,13 @@ Hierbei handelt es sich um ein Datum, welches in der SEPA Vorabinformation als D
 Die Rechnung enthält Steuern.
 ```
 
-### Datumsformat
+## Datum Formatieren
 
+Stunden werden mittels Smarty date_format direktives formatiert.
+
+[Zur vollständigen Dokumentation von date_format](https://www.smarty.net/docsv2/de/language.modifier.date.format.tpl)
+
+### 14:33:00
 ```smarty
 {$invoice.date | date_format:"%H:%M:%S"}
 ```
@@ -173,4 +177,14 @@ Die Rechnung enthält Steuern.
 **Ausgabe**
 ```text
 14:33:00
+```
+
+### 28.06.2024
+<code-block lang="smarty" ignore-vars="true">
+    {$invoice.date | date_format:"%d.%m.%Y"} 
+</code-block>
+
+**Ausgabe**
+```text
+28.06.2024
 ```
