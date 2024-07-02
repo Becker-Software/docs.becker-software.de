@@ -148,7 +148,7 @@ Beispiel
 Die Spezielle Variable `{$sepa_prenotification_date}` oder `{$sepa_prenotification_due_date}` wird verwendet um das Datum der SEPA Vorabinformation zu setzen.
 Hierbei handelt es sich um ein Datum, welches in der SEPA Vorabinformation als Datum des Einzugs angegeben wird.
 
-## IF-Abfrage_
+## IF-Abfrage
 
 ```smarty
 {if $invoice.tax > 0}
@@ -171,7 +171,7 @@ Stunden werden mittels Smarty date_format direktives formatiert.
 
 ### 14:33:00
 ```smarty
-{$invoice.date | date_format:"%H:%M:%S"}
+{$invoice.date|date_format:"%H:%M:%S"}
 ```
 
 **Ausgabe**
@@ -181,7 +181,7 @@ Stunden werden mittels Smarty date_format direktives formatiert.
 
 ### 28.06.2024
 <code-block lang="smarty" ignore-vars="true">
-    {$invoice.date | date_format:"%d.%m.%Y"} 
+    {$invoice.date|date_format:"%d.%m.%Y"} 
 </code-block>
 
 **Ausgabe**
