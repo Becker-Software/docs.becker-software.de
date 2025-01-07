@@ -1,4 +1,4 @@
-# WHMCS Lexware Office Modul
+# E-Rechnungen & Rundungsdifferenzen
 
 Das WHMCS Lexware Office Modul ermöglicht die Integration von Rechnungen aus WHMCS in Lexoffice. Dabei wird ein Problem deutlich, das durch die unterschiedliche Handhabung von Netto- und Bruttopreisen in WHMCS und Lexoffice entsteht.
 
@@ -12,7 +12,7 @@ Das WHMCS hier nur Netto oder Brutto vorsieht, widerspricht den Anforderungen:
 - **Privatkunden (B2C)** Rechnungen auf Basis von Bruttopreisen erstellt werden (Preis inklusive Mehrwertsteuer).
 - **Geschäftskunden (B2B)** Rechnungen auf Basis von Nettopreisen erstellt werden (Preis exklusive Mehrwertsteuer).
 
-Da viele Hosting-Anbieter in WHMCS für Transparenz und Benutzerfreundlichkeit Bruttopreise verwenden, ergibt sich ein Konflikt bei der Integration mit Lexoffice.
+Da viele Hosting-Anbieter in WHMCS im Rahmen der Preisangabenverordnung ([PAngV § 3 Absatz 1](https://www.gesetze-im-internet.de/pangv_2022/__3.html)) gegenüber Privatpersonen Bruttopreise verwenden, ergibt sich ein Konflikt bei der Integration mit Lexoffice.
 
 ## Anforderungen von Lexoffice
 
