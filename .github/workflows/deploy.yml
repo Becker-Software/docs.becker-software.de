@@ -19,7 +19,7 @@ env:
   # Replace HI with the ID of the instance in capital letters
   ARTIFACT: webHelpHI2-all.zip
   # Writerside docker image version
-  DOCKER_VERSION: 2.1.1479-p3869
+  DOCKER_VERSION: latest
 
 jobs:
   build:
@@ -53,7 +53,7 @@ jobs:
 
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: docs
           path: artifacts
