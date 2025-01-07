@@ -13,7 +13,7 @@ WHMCS.
 Mit lexoffice können Sie Ihren Steuerberater direkt einladen. Dieser kann über das Steuerberaterportal bequem Exporte im
 DATEV Format herunterladen.
 
-## Kontaktsyncronisation \[Addon\]
+## Kontaktsyncronisation [Addon]
 
 Statt bei Rechnungsstellung erfolgt eine zwei Wege Synchronisation. Kunden, die in WHMCS bearbeitet werden, werden
 direkt in lexoffice upgedatet und lexoffice Kundenstamm Änderungen direkt in WHMCS.

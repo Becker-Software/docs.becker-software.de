@@ -1,10 +1,13 @@
 <buildprofiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd">
+    <sitemap priority="0.35" change-frequency="monthly"/>
     <variables>
+        <offline-docs>true</offline-docs>
         <color-preset>frozen</color-preset>
         <showDownloadButton>true</showDownloadButton>
         <download-page>https://www.becker-software.de/</download-page>
         <download-title>Visit Website</download-title>
+        <noindex-content>false</noindex-content>
     </variables>
     <build-profile instance="hi"/>
     <footer>

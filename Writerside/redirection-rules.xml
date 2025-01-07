@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
 <rules>
+    <rule id="c1fc77f">
+        <description>Created after removal of "Updateverlauf" from Becker-Software Documentation</description>
+        <accepts>sevdesk-release-notes.html</accepts>
+    </rule>
+    <rule id="4a679083">
+        <description>Created after removal of "Updateverlauf" from Becker-Software Documentation</description>
+        <accepts>lexoffice-release-notes.html</accepts>
+    </rule>
+    <rule id="6d0d1af1">
+        <description>
+            <![CDATA[Created after removal of "Steuern & Rundungsdifferenzen" from Becker-Software Documentation]]></description>
+        <accepts>Steuern-Rundungsdifferenzen.html</accepts>
+    </rule>
+    <rule id="4611bbd8">
+        <description>
+            <![CDATA[Created after removal of "Steuern & Rundungsdifferenzen" from Becker-Software Documentation]]></description>
+        <accepts><![CDATA[Steuern & Rundungsdifferenzen.html]]></accepts>
+    </rule>
+    <rule id="6e2ee111">
+        <description>
+            <![CDATA[Created after removal of "<E-Rechnungen.md>" from Becker-Software Documentation]]></description>
+        <accepts>E-Rechnungen.html</accepts>
+    </rule>
+    <rule id="d872877">
+        <description>Created after removal of "E-Rechnungen" from Becker-Software Documentation</description>
+        <accepts>E-Rechnungen.html</accepts>
+    </rule>
 </rules>

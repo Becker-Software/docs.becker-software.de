@@ -12,16 +12,15 @@
         <toc-element topic="lexoffice-install.topic"/>
         <toc-element topic="lexoffice-config.md"/>
         <toc-element topic="lexoffice-features.md"/>
-        <toc-element topic="lexoffice-release-notes.md"/>
         <toc-element topic="lexoffice-variables.md"/>
         <toc-element topic="Umstellung-lexoffice-Auth.md" toc-title="Umstellung auf Autorisierungsschlüssel"/>
     </toc-element>
+    <toc-element topic="E-Rechnungen.md"/>
     <toc-element topic="whmcs-sevdesk-modul.md">
         <toc-element topic="sevdesk-requirements.md"/>
         <toc-element topic="sevdesk-install.md"/>
         <toc-element topic="sevdesk-config.md"/>
         <toc-element topic="sevdesk-features.md"/>
-        <toc-element topic="sevdesk-release-notes.md"/>
     </toc-element>
     <toc-element topic="whmcs-module-support.md"/>
 </instance-profile>
