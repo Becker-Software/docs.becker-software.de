@@ -8,6 +8,7 @@
 
     <toc-element topic="start.topic" toc-title="Documentation"/>
     <toc-element topic="whmcs-lexoffice-modul.md">
+        <toc-element topic="Verlust-der-Authentifizierung.md"/>
         <toc-element topic="lexoffice-requirements.md"/>
         <toc-element topic="lexoffice-install.topic"/>
         <toc-element topic="lexoffice-config.md"/>
